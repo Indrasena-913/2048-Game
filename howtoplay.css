@@ -1,0 +1,37 @@
+.container {
+	max-width: 790px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	justify-items: center;
+	text-align: center;
+	padding: 1rem 0;
+	background-color: #f0f0f0;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 1.65;
+}
+.footer-content a {
+	margin: 0 0.5rem;
+}
+@media screen and (max-width: 520px) {
+	body {
+		margin: 20px 0;
+		padding: 0 20px;
+		font-size: 15px;
+	}
+	img {
+		height: 70%;
+		width: 70%;
+	}
+}
+#para {
+	text-align: right;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>how to play</title>
+		<link rel="stylesheet" href="howtoplay.css" />
+	</head>
+	<body>
+		<div class="container">
+			<p id="para">
+				<a href="index.html">Back To HomePage</a>
+			</p>
+			<h1>Game Strategy and Tips</h1>
+			<h2>Introduction</h2>
+			<p>
+				2048 is a single-player puzzle game. The original idea was contributed
+				in March 2014 by Gabriele Cirulli using an inspiration of the 1024 app
+				game. The purpose of the game is to dictate a sequence of arrow
+				movements on a 4x4 board with the purpose of reaching the 2048 value on
+				the board. Each arrow movement:
+			</p>
+			<ol>
+				<li>
+					triggers numbers on the board to move in that direction should free
+					space be available.
+				</li>
+				<li>
+					merges two numbers of the same value into their sum when they are on
+					consecutive positions aligned with the arrow's direction.
+				</li>
+				<li>triggers new values of 2 or 4 to appear randomly on the board.</li>
+			</ol>
+			<p>
+				The game can be a bit frustrating for new players due to its simple
+				rules and an easy start, which contrasts with the relative difficulty in
+				the later game to reach a solution. In the following paragraphs we
+				present a series of tips and tricks that should help shape a strategy
+				for winning the game in the majority of the cases.
+			</p>
+			<h1>1. Have a corner</h1>
+			<p>
+				The 2048 game board hosts two main activities that are taking place all
+				the time:
+			</p>
+			<ol>
+				<li>
+					the generation of new square values (that are always either a 2 or a
+					4).
+				</li>
+				<li>the merging of values in order to create greater numbers.</li>
+			</ol>
+			<p>
+				These 2 activities need to be organized in order to facilitate the
+				process to take place incrementally. One way to do this is via a
+				gradient, where you encourage the largest value of the board to be
+				placed in one of its corners. All the other numbers would start
+				initially at a distance from that corner, and then begin to close-in on
+				it as they become bigger.
+			</p>
+			<p>
+				<img src="gradient.png" alt="" srcset="" />
+			</p>
+			<p>
+				You can obtain this gradient pattern by following a basic sequence
+				movement, consisting of pressing two arrows alternatively, one on the
+				vertical direction and the other one on the horizontal direction (for
+				example, arrow-up and arrow-left will place the largest value in the
+				left-top corner). You can follow this technique alone in order to reach
+				easily a value of 128 or even higher. If you get stuck and neither of
+				the two arrows is providing any valid moves, then move horizontally
+				against the regular move (so do one arrow-right if you were doing
+				arrow-lefts) and immediately after, do the regular vertical move. This
+				should get the board unstuck and allow you to continue to play the game.
+			</p>
+			<h2>2. A full home row</h2>
+			<p>
+				If you play a few games just using the strategy above, you might observe
+				one of its flaws: when stuck, the suggestion to move horizontally
+				against the regular movement has often a side-effect in the sense of
+				moving the highest value on the board towards the center of the row.
+				This is dangerous as a new 2 or 4 number might appear in the corner that
+				freed up, and this might make it impossible to restore the highest value
+				into a corner. The best way to deal with this situation is to prevent
+				it. Should you have the opportunity, you should always 'move' new values
+				on the home row (depending on how you move, the first or the last row on
+				the board containing the highest value in its corner) so that it's
+				always full (4 numbers out of 4). This will ensure that you can reverse
+				the direction horizontally without risking to move the highest value.
+			</p>
+			<p>
+				<img src="trapped.png" alt="" />
+			</p>
+			<h2>Conclusion</h2>
+			<p>
+				The strategies presented go a long way to enrich your 2048 skill-set and
+				improve your abilities for solving this puzzle. We recommend to
+				implement the suggestions via your own practice and develop your own
+				style of playing the game based on them. If you want to practice the
+				tips above, you can click the button below to start a new puzzle game.
+				Good luck!
+			</p>
+			<a id="back" href="index.html">PLay 2044</a>
+		</div>
+		<footer>
+			<div class="footer-content">
+				<p>Play our other popular games:</p>
+				<a href="futoshiki.html">Futoshiki</a> |
+				<a href="kakuro.html">Kakuro</a> |
+				<a href="hashi.html">Hashi</a>
+			</div>
+			<div class="footer-legal">
+				<p>
+					©2024 - 2048.org (operated by Beetux Software) -
+					<a href="privacy.html">Privacy Policy</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
