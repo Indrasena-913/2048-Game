@@ -133,3 +133,9 @@ footer a:hover {
 	position: absolute;
 	top: 100px;
 }
+@media (max-width: 576px) {
+	.game-name {
+		position: absolute;
+		top: 20px;
+	}
+	
