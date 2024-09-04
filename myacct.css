@@ -1,0 +1,119 @@
+body,
+h1,
+p,
+a {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 400px;
+	height: 500px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.sign-in-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.sign-in-form label {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.sign-in-form input {
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.sign-in-form button {
+	padding: 10px;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.sign-in-form button:hover {
+	background-color: #0056b3;
+}
+
+.links {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.links a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.links a:hover {
+	text-decoration: underline;
+}
+
+.contact {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.contact a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.contact a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	margin-top: 20px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+}
+
+footer a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+.game-name {
+	position: absolute;
+	top: 100px;
+}

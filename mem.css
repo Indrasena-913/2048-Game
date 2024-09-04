@@ -1,0 +1,135 @@
+/* Reset some default styles */
+body,
+h1,
+p,
+ul,
+li,
+a {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Basic styling for the page */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	background-color: #dde9eb;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 850px;
+	height: 570px;
+	color: rgb(0, 0, 0);
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+p,
+ul {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: disc;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+ul li {
+	margin-bottom: 5px;
+}
+
+.membership-form {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.membership-form label {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.membership-form input {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.membership-form button {
+	padding: 10px;
+	background-color: #007bff;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.membership-form button:hover {
+	background-color: #0056b3;
+}
+
+.payment-info {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.payment-info p {
+	margin-bottom: 30px;
+}
+
+.contact {
+	font-size: 14px;
+	margin-bottom: 20px;
+	margin-left: 40%;
+}
+
+.contact a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.contact a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+}
+
+footer a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+* {
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+
+.game-name {
+	position: absolute;
+	top: 100px;
+}

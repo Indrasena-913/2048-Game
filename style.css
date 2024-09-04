@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.score {
+	background-color: brown;
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-weight: bolder;
+	color: aliceblue;
+}
+.high-score {
+	background-color: brown;
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-weight: bolder;
+	color: aliceblue;
+}
+
+.line-span {
+	font-weight: bolder;
+}
+body {
+	font-family: Arial, sans-serif;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	gap: 1rem;
+	padding: 0 1rem;
+}
+
+.login {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	padding: 0.5rem 0;
+}
+
+.section1 {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	justify-items: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 200px);
+	gap: 1rem;
+	justify-items: center;
+	text-align: center;
+}
+.game-name {
+	grid-column: span 2;
+}
+
+.game-name img {
+	max-width: 100%;
+	height: auto;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-top: 1rem;
+	width: 100%;
+	max-width: 400px;
+	background-color: #5a879c;
+	padding: 20px;
+	border-radius: 5px;
+	/* background-color: #5a879c; */
+}
+
+.grid-cell {
+	height: 80px;
+	width: 80px;
+	background-color: #ccc0b3;
+	border-radius: 6px;
+	padding: 1rem;
+	font-size: 2rem;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.new-game {
+	background-color: #8f7a66;
+	padding: 0.5rem 1rem;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	justify-items: center;
+	text-align: center;
+	padding: 1rem 0;
+	background-color: #f0f0f0;
+}
+
+.footer-content a {
+	margin: 0 0.5rem;
+}
+
+@media (max-width: 576px) {
+	body {
+		background-color: lightyellow;
+	}
+	.section1 {
+		grid-template-columns: 1fr;
+		align-items: center;
+	}
+
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+	.grid-cell {
+		/* height: auto; */
+		width: auto;
+	}
+
+	footer {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		text-align: center;
+	}
+	.grid-container {
+		margin: 30px auto;
+		transform: scale(0.8);
+	}
+	.game-play {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
