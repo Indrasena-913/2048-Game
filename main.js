@@ -216,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		score = 0;
 		document.querySelector(".span").textContent = score;
 		createGrid();
+		document.addEventListener("keydown", handlePressKey);
 	});
 
 	createGrid();
