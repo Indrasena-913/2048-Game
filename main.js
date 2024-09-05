@@ -6,14 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	let HighScore = parseInt(localStorage.getItem("highScore")) || 0;
 
 	function createGrid() {
-		gridContainer.innerHTML = ""; // Clear existing cells
+		gridContainer.innerHTML = "";
 		grid = Array.from({ length: gridSize * gridSize }, () => 0);
 
 		for (let i = 0; i < gridSize * gridSize; i++) {
 			const cell = document.createElement("div");
 			cell.className = "grid-cell";
 			gridContainer.appendChild(cell);
-			// cell.style.marginBottom = "15px";
 		}
 
 		AddRandomTile();
@@ -31,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function AddRandomTile() {
 		const index = getRandomEmptyCell();
-		if (score == 2048) {
-			alert("You win ");
-			document.removeEventListener("keydown", handlePressKey);
+		if (grid.includes(2048)) {
+			winGame();
 		} else if (index !== undefined) {
+			// grid[0] = 2048;
 			grid[index] = Math.random() < 0.9 ? 2 : 4;
 			UpdateDisplay();
 		} else {
@@ -50,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			cell.style.backgroundColor =
 				value !== 0 ? getTileColor(value) : "#ccc0b3";
 			cell.style.color = value !== 0 ? "#776e65" : "transparent";
-			cell.style.fontSize = value > 1000 ? "35px" : "40px";
+			cell.style.fontSize = value > 1000 ? "20px" : "25px";
 		});
 		if (score > HighScore) {
 			document.querySelector(".span1").textContent = score;
@@ -105,6 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
 				break;
 		}
 		UpdateDisplay();
+	}
+
+	function winGame() {
+		alert("You win! Congratulations!");
+		document.removeEventListener("keydown", handlePressKey);
+		SaveHighscore();
 	}
 
 	document.addEventListener("keydown", handlePressKey);
@@ -166,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function mergeTiles(tiles) {
-		const filteredTiles = tiles.filter((value) => value !== 0); // Remove zeroes
+		const filteredTiles = tiles.filter((value) => value !== 0);
 		const mergedTiles = [];
 		let skipNext = false;
 
@@ -187,7 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		}
 
-		// Add zeroes to the end
 		while (mergedTiles.length < gridSize) {
 			mergedTiles.push(0);
 		}
@@ -196,10 +200,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	function gameOver() {
 		alert("Game Over!");
-		// Optionally disable further input
 		document.removeEventListener("keydown", handlePressKey);
 		SaveHighscore();
 	}
+
 	function SaveHighscore() {
 		if (score > HighScore) {
 			HighScore = score;
@@ -208,10 +212,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	document.querySelector(".new-game").addEventListener("click", function () {
-		score = 0; // Reset the score
+		score = 0;
 		document.querySelector(".span").textContent = score;
 		createGrid();
 	});
 
-	createGrid(); // Initial setup
+	createGrid();
 });
