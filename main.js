@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const gridContainer = document.getElementById("grid-container");
 	let grid = [];
 	let score = 0;
-	let HighScore = parseInt(localStorage.getItem("highscore")) || 0;
+	const HighScore = parseInt(localStorage.getItem("highscore")) || 0;
 
 	function createGrid() {
-		// document.addEventListener("keydown", handlePressKey);
 		gridContainer.innerHTML = "";
 		grid = Array.from({ length: gridSize * gridSize }, () => 0);
 
@@ -215,9 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector(".new-game").addEventListener("click", function () {
 		score = 0;
 		document.querySelector(".span").textContent = score;
-		document.addEventListener("keydown", handlePressKey);
 		createGrid();
-		// document.addEventListener("keydown", handlePressKey);
 	});
 
 	createGrid();
