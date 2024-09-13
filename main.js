@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const gridContainer = document.getElementById("grid-container");
 	let grid = [];
 	let score = 0;
-	let HighScore = parseInt(localStorage.getItem("highScore")) || 0;
+	let HighScore = parseInt(localStorage.getItem("highscore")) || 0;
 
 	function createGrid() {
 		// document.addEventListener("keydown", handlePressKey);
