@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	function gameOver() {
 		alert("Game Over!");
 		document.removeEventListener("keydown", handlePressKey);
-		SaveHighscore(score,Highscore);
+		SaveHighscore(score,HighScore);
 	}
 
 	function SaveHighscore(score,HighScore) {
