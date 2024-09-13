@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const gridContainer = document.getElementById("grid-container");
 	let grid = [];
 	let score = 0;
-	let HighScore = localStorage.getItem("highscore");
-        HighScore = HighScore ? parseInt(HighScore, 10) : 0;
-
+	const HighScoreDisplay = document.querySelector(".span1");
+	let HighScore = parseInt(localStorage.getItem("highscore")) || 0;
+	HighScoreDisplay.textContent = HighScore;
 	function createGrid() {
 		gridContainer.innerHTML = "";
 		grid = Array.from({ length: gridSize * gridSize }, () => 0);
