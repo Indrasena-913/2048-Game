@@ -202,13 +202,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	function gameOver() {
 		alert("Game Over!");
 		document.removeEventListener("keydown", handlePressKey);
-		SaveHighscore();
+		SaveHighscore(score,Highscore);
 	}
 
-	function SaveHighscore() {
+	function SaveHighscore(score,HighScore) {
 		if (score > HighScore) {
 			HighScore = score;
 			localStorage.setItem("highscore", HighScore);
+			console.log("localll")
 		}
 	}
 
