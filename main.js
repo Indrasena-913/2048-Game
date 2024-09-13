@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function SaveHighscore(score,HighScore) {
-		if (score > HighScore) {
+		if (score >= HighScore) {
 			HighScore = score;
 			localStorage.setItem("highscore", HighScore);
 			console.log("localll")
