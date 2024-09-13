@@ -214,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	document.querySelector(".new-game").addEventListener("click", function () {
+		document.addEventListener("keydown", handlePressKey);
 		score = 0;
 		document.querySelector(".span").textContent = score;
 		createGrid();
