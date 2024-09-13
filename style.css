@@ -131,7 +131,7 @@ footer {
 	}
 	.grid-container {
 		margin: 30px auto;
-		transform: scale(0.8);
+		transform: scale(0.75);
 	}
 	.game-play {
 		text-align: center;
