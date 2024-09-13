@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const gridContainer = document.getElementById("grid-container");
 	let grid = [];
 	let score = 0;
-	let HighScore = parseInt(localStorage.getItem("highscore")) || 0;
+	let HighScore = localStorage.getItem("highscore");
+        HighScore = HighScore ? parseInt(HighScore, 10) : 0;
 
 	function createGrid() {
 		gridContainer.innerHTML = "";
